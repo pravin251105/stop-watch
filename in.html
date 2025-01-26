@@ -166,10 +166,10 @@
         }
 
         #restart {
-            background: #00bcd4; /* Blue for Restart */
+            background: #9e9e9e; /* Grey for Restart () */
         }
         #restart:hover {
-            background: #039be5; /* Darker blue on hover */
+            background: #616161; /* Darker grey on hover */
         }
 
         .laps {
@@ -225,7 +225,7 @@
             <button id="pause" disabled>Pause</button>
             <button id="reset" disabled>Reset</button>
             <button id="lap" disabled>Lap</button>
-            <button id="restart" disabled>Restart</button>
+            <button id="restart">Restart</button>
         </div>
         <div class="laps">
             <h3>Lap Times:</h3>
@@ -315,16 +315,8 @@
         }
 
         function restart() {
-            elapsedTime = 0;
-            display.textContent = timeToString(elapsedTime);
-            updateAnalogClock();
             laps = [];
             lapsList.innerHTML = '';
-            startButton.disabled = false;
-            pauseButton.disabled = true;
-            resetButton.disabled = true;
-            lapButton.disabled = true;
-            restartButton.disabled = true;
         }
 
         startButton.addEventListener('click', start);
